@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-fixed": "#001550",
+            "on-secondary": "#ffffff",
+            "on-surface": "#191c1e",
+            "primary-fixed-dim": "#b6c4ff",
+            "background": "#f7f9fb",
+            "error": "#ba1a1a",
+            "surface-tint": "#004ee7",
+            "inverse-on-surface": "#eff1f3",
+            "surface-dim": "#d8dadc",
+            "on-background": "#191c1e",
+            "primary": "#0043c8",
+            "surface-container-high": "#e6e8ea",
+            "surface-container-low": "#f2f4f6",
+            "on-surface-variant": "#434656",
+            "outline": "#737688",
+            "on-secondary-container": "#586377",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#c13600",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffdbd1",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#eceef0",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#bcc7de",
+            "outline-variant": "#c3c5d9",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#862300",
+            "tertiary-fixed-dim": "#ffb59f",
+            "secondary-fixed": "#d8e3fb",
+            "on-secondary-fixed-variant": "#3c475a",
+            "inverse-primary": "#b6c4ff",
+            "surface-container-highest": "#e0e3e5",
+            "primary-fixed": "#dce1ff",
+            "tertiary": "#972800",
+            "on-primary-fixed-variant": "#003ab2",
+            "primary-container": "#0057ff",
+            "on-tertiary-fixed": "#3a0a00",
+            "secondary-container": "#d5e0f8",
+            "secondary": "#545f73",
+            "surface-bright": "#f7f9fb",
+            "inverse-surface": "#2d3133",
+            "on-primary-container": "#e5e8ff",
+            "surface": "#f7f9fb",
+            "on-error": "#ffffff",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-container": "#ffe3db",
+            "on-secondary-fixed": "#111c2d"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(195, 197, 217, 0.15);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background antialiased overflow-x-hidden">
+<!-- TopAppBar Execution -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm dark:shadow-slate-950/20">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-blue-700 dark:text-blue-500 font-headline">Horizon</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 font-label py-1" href="#">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-white/20 transition-all duration-300 font-label py-1" href="#">Journal</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:bg-white/20 transition-all duration-300 font-label py-1" href="#">Destinations</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label font-semibold active:scale-95 transition-transform">
+          Login/Register
+        </button>
+<button class="text-blue-600 dark:text-blue-400 p-2 rounded-full hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined block">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Hero & Search Section -->
+<section class="px-8 md:px-12 lg:px-20 mb-16 relative">
+<div class="max-w-4xl pt-12">
+<h1 class="font-headline text-display-lg text-6xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-6 leading-none">
+          Document Your <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Next Journey.</span>
+</h1>
+<!-- Search Bar with Surface-Container Tiering -->
+<div class="mt-10 max-w-2xl bg-surface-container-lowest glass-card p-2 rounded-full flex items-center shadow-lg">
+<div class="flex-1 flex items-center px-6 gap-3">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-lg placeholder:text-outline/60" placeholder="Where do you want to go?" type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold active:scale-95 transition-all">
+            Find
+          </button>
+</div>
+</div>
+</section>
+<!-- Featured Destinations - Bento Style -->
+<section class="px-8 md:px-12 lg:px-20 mb-20">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-2">Featured Destinations</h2>
+<p class="text-outline font-medium">Curated escapes for the modern explorer</p>
+</div>
+<a class="text-primary font-bold text-sm uppercase tracking-widest hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[600px]">
+<!-- Big Bento Card -->
+<div class="md:col-span-8 relative overflow-hidden rounded-xl group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Stunning aerial view of Yosemite Valley with granite cliffs and lush evergreen forests in misty morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHOCCRewFF4v08HpxsDBjJRiwbm9Rmvns3iAQ11rP9IP7PmCK-4uDiewqK7ebj9XHepfmB3mHB0oidwPG7UJJo66xQEk4a5n1FKJrv29P8rXUJfP2nUJAkEMRgdeCbYCiy5IkYWtIHUjoJlX8_fqPgMmDyB7B0uQJ0KGC2DEBK-PH6tgF6bnMAztGhv9YbC3plcXvSg3hvjFrp0rXUGNegn_BpGirIgGhURehF3CAvrJHJg6yp9jh1_TA5mjjV6GeI_q06wW0IA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="glass-card inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Popular Choice</span>
+</div>
+<h3 class="font-headline text-4xl font-bold text-white mb-2">Yosemite Peaks</h3>
+<p class="text-white/80 max-w-md">Experience the raw majesty of California's most iconic national park.</p>
+</div>
+</div>
+<!-- Stacked Bento Cards -->
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="relative overflow-hidden rounded-xl group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Colorful historic buildings along a venetian canal with gondolas resting on the emerald green water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeGktt087l4I87To9JfegshE1BGqrYldsT33O1rtnFRPKlTaPiKwQ1BOGhU_mY6MjdkeWNlLz_EAGO9A320vRlJHrKOycb6pKJPkkclFMDZ-slHbyRCYIiuGGflk4vQ6fZ5VYUNWDTQBoAlITqzDFdD13jXpURRUsbr6QbEZHlJzK43NZBLv_w9bzkZOvXFiPbAW2CkasgRRqFQygv3ccwhD1cjvTZAh2lArS16pnW2oyj4scaE9taj3RMZz1EJ376AqxmBBzxiQ"/>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-2xl font-bold text-white">Venice</h3>
+<p class="text-white/80 text-sm">Italy's Floating Dream</p>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Traditional pagoda temple in Kyoto surrounded by vibrant autumn maple leaves in shades of red and orange" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA380QwVSPSIQZvuycxjmm5pnLd80TQfSK48zQd3PdEIPBDf8hZoGtXZzTPHLnYokl4pTVWeLqvB4O5ZJW0nE3ZgAHEBCBSpp0k9B35LGC08L3wHIJxxY6-IXX5tmmRyRZ8h-y4evhaJjcYUJADsHCIuRbcspngvmVhqr0-kxS0ri_tuDq3BJoucodNRcqWg_fXq6__FPyU0NSy1nW0mip4g9CFW7Vid4jrQ8nAZrdUMhZgBch7ID3ACZTOzEVZ1ldeKxJLfQfETQ"/>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline text-2xl font-bold text-white">Kyoto</h3>
+<p class="text-white/80 text-sm">The Heart of Tradition</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended Trips -->
+<section class="px-8 md:px-12 lg:px-20 mb-20">
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-8">Recommended Trips</h2>
+<div class="flex gap-6 overflow-x-auto pb-8 no-scrollbar">
+<!-- Glass Trip Card -->
+<div class="min-w-[300px] max-w-[300px] glass-card rounded-xl p-4 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative h-48 rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Pristine tropical beach with white sand and clear turquoise water under a bright midday sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS4abu9gjWPMUIpo-_Pl1Evp3xP4Fb6LESgUXEQFBa9uwP4U3EZM7uQeihs5iCMzpQLotL9WNYhyqHfYjyaj5dGENT38Twt9mzarWHsEeg2taFCuXwPDJJf-nyk1BTdPRkIBDNnhHeqD6hvdhsveHmTm11w1NcewbxBUTMegC-Q3UM-__6wCwARyuLKf0Ro0Iqmfwple2UvQaSpVNDqvmhat1PzMqz8YmMkwV26VDiA1JKQbbP48RD3iXJb2ky5wDEkP3iiYSNTA"/>
+<div class="absolute top-3 right-3 glass-card px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-primary">$1,200</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Maldives Retreat</h4>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-outline text-sm">schedule</span>
+<span class="text-xs text-outline font-medium">7 Days • All Inclusive</span>
+</div>
+<button class="w-full py-2 border border-outline-variant rounded-full text-sm font-bold text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-colors">
+            View Itinerary
+          </button>
+</div>
+<!-- Glass Trip Card 2 -->
+<div class="min-w-[300px] max-w-[300px] glass-card rounded-xl p-4 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative h-48 rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Panoramic view of the Amalfi Coast with pastel colored houses perched on dramatic cliffs above the blue sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz9hvUCoj8DwCnCt-Z2wULUeagYR5gvqP94qKOE4f0U0qbkjDSMjynhDZbYvkw1mhhzx6ApVnQJ2MB8sOVzIchluAtf_nGalCftKETiqeBqmKf42L_jN4XS7lxHOy62PDpBsADRp_9yvgJKCWNFYYs4SEfMLXqs1MWasfz1BlCEYjlcfCzDavl9Q-GRD3M-e_2u9cjUNsacfCu4GG1Gwurt5ftCpn67dtyGubaVDcECYT9Jkf_y_7TV95e1g7YdcHDBsCd7itdJg"/>
+<div class="absolute top-3 right-3 glass-card px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-primary">$2,450</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Amalfi Coastline</h4>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-outline text-sm">schedule</span>
+<span class="text-xs text-outline font-medium">5 Days • Boutique</span>
+</div>
+<button class="w-full py-2 border border-outline-variant rounded-full text-sm font-bold text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-colors">
+            View Itinerary
+          </button>
+</div>
+<!-- Glass Trip Card 3 -->
+<div class="min-w-[300px] max-w-[300px] glass-card rounded-xl p-4 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative h-48 rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Santorini white buildings with iconic blue domes overlooking the deep blue Aegean sea at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ja8Vs9KC8zJElH2Ggb3Ye8iayJWfUP7LwaNnjGnAU7bLYOsSA2YEAlSGaze0IYgXZT1yqG3lL4Z6VMuGX0ENpdKMVO3hYPl5taQTUHywYjroz5em7waMs0Ek3YDJEkiNXI3-HDPcWrjOGfTCgBh-1hAZFEsvKxKntAKgbSI4haYqg_tyJ064MXpMIDLYZV-oL0OcWFLapsW4Rrcaaf9Y-G24-FeKknTaRGo33cs0uqZA2RzNbD0MiiVqT5d1tVSzfygOgCPUcg"/>
+<div class="absolute top-3 right-3 glass-card px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-primary">$1,890</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Santorini Sunsets</h4>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-outline text-sm">schedule</span>
+<span class="text-xs text-outline font-medium">4 Days • Luxury</span>
+</div>
+<button class="w-full py-2 border border-outline-variant rounded-full text-sm font-bold text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-colors">
+            View Itinerary
+          </button>
+</div>
+<!-- Glass Trip Card 4 -->
+<div class="min-w-[300px] max-w-[300px] glass-card rounded-xl p-4 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="relative h-48 rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="Reflective alpine lake surrounded by tall snow-capped mountains and pine forests under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7E7ELuwN-UzN6ufet_njm82iy6dGn72ApnhhbEI02eCAO0OTjWUqiuxszwgIClhnorpMu9KIb_W6LHeAL_ghHKPreeWFUcphBHDeL98spieJ9OnusvMywUMjeEIY8QC0D_7WCQzTPesQ6snVZBiaZ7mkoMRRB2yRksvJdUOQvbaiUied8WFmZQa8hhEnkVQwsZ5hE4SZAl0Xw9UtAhIlwreqxlL82dkyCOoCclSjCo4M-Co__Ls4y3g-Yvum8Y64NEmBNFCNOJQ"/>
+<div class="absolute top-3 right-3 glass-card px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-primary">$3,100</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Swiss Alps Trek</h4>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-outline text-sm">schedule</span>
+<span class="text-xs text-outline font-medium">10 Days • Adventure</span>
+</div>
+<button class="w-full py-2 border border-outline-variant rounded-full text-sm font-bold text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-colors">
+            View Itinerary
+          </button>
+</div>
+</div>
+</section>
+<!-- Recent Explorations - Editorial Layout -->
+<section class="px-8 md:px-12 lg:px-20 mb-20">
+<div class="bg-surface-container-low rounded-3xl p-12 flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 space-y-6">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight">Recent Explorations</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+            Take a look at where you've been and revisit your captured moments. Your digital travel journal awaits.
+          </p>
+<div class="flex gap-4">
+<div class="h-24 w-24 rounded-xl overflow-hidden ring-4 ring-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="The Taj Mahal in Agra, India, glowing in the soft light of sunrise with a misty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBstMTdSttTwwfKXp5-F3KoaTqf84M3LaxgQy6OWNDj4s8dxZpJpj1SJcT3yNFbUj7ZM5pKKCoN-QufKptMgXwztCukuxc4aQQocmXBTfjQzL_bTbe-ht8mfhRz_60LW6Q4ulvTEQ0MVyOwvsvb1uTJv_flreuB2xUNoNtXb_NR2Hi5mTKRchvTzTZYqcdZwlsNRKVoXPB0K5_Uos5tDpIIcCRfXYVXA3vFzz02qCM1wQX3IU--63Rf_OxwWKF205zU7WeiZfCLqg"/>
+</div>
+<div class="h-24 w-24 rounded-xl overflow-hidden ring-4 ring-white shadow-md -translate-y-4">
+<img class="w-full h-full object-cover" data-alt="Aerial view of a turquoise river winding through a dense dark green forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHVdNmImPjRTrfgyLh2C-9xvvWpjLbJdPbN0MyTymzWrBEqtjTXmtgmeO4PK-QKEl4NkG0VYtMfACL6Ui1Syh4hPHegqTXBuD0d84tFhQo-Th03pM_448TfkAdCjJMVTn9IrmMOxa3zlVWPAth995twGebTFiQ6myJR0FrYnBU_ugB-_Cg0En8y0iuDCt08HF0eIqizs2dLUj8k6lfaH2pDMFqtUZoNOi4EOeqiASBKMFUMdmMbI-5u_QCJL8wFVgmWWmDInsHGQ"/>
+</div>
+<div class="h-24 w-24 rounded-xl overflow-hidden ring-4 ring-white shadow-md translate-y-2">
+<img class="w-full h-full object-cover" data-alt="Close up of a vintage camera and travel map resting on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzN5W3ZqeM-JO3Ym3Db_CxKizF8uxhTsu8tyawYhP-tcWzHTrYPAwwzUDm4nNS-mWpCcFiZpCUx-p6dtEtsbPg3w6tD-gMzGjne14i6hzEJd5kc1PuJxD49rE0PFZIDRgAVx0tL_TAXJeZMjtwNNIEL_AhZMO2RqPglozGenOpmYZK7u1HwWRcxQr0N0eGSZ_U-pxoRN5T35Z6NupIKmunGCejNrUnXM8AKzhctvw91dgPOdG3-uyDEiZGsfOsdSrgR0M-JSNMUQ"/>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group">
+            Open My Journal
+            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1">
+<div class="glass-card p-6 rounded-2xl shadow-xl border-white/40">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+</div>
+<div>
+<h5 class="font-bold">Journal Summary</h5>
+<p class="text-xs text-outline">Updated 2 hours ago</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+<span class="text-sm font-medium">Countries Visited</span>
+<span class="font-bold text-primary">12</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/30">
+<span class="text-sm font-medium">Miles Traveled</span>
+<span class="font-bold text-primary">24,402</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-sm font-medium">Photos Captured</span>
+<span class="font-bold text-primary">1,154</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Execution -->
+<footer class="w-full border-t border-slate-200/20 bg-slate-50/50 dark:bg-slate-950/50 backdrop-blur-md">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6 w-full font-inter text-sm tracking-wide">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-manrope font-extrabold text-slate-900 dark:text-white text-xl">Horizon</span>
+<p class="text-slate-500 opacity-80">© 2024 Horizon Travel Journal. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-blue-500 transition-colors duration-200" href="#">Explore</a>
+<a class="text-slate-500 hover:text-blue-500 transition-colors duration-200" href="#">Journal</a>
+<a class="text-slate-500 hover:text-blue-500 transition-colors duration-200" href="#">Support</a>
+<a class="text-slate-500 hover:text-blue-500 transition-colors duration-200" href="#">Privacy</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">share</span>
+</div>
+</div>
+</footer>
+</body></html>
